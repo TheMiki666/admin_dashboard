@@ -56,6 +56,16 @@ h1{
 header{
     grid-area: 1 / 2 / 2 / 3;
     background-color: var(--header-bg-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+header h2, header h3{
+    height: 3rem;
+    padding: auto;
 }
 
 main{
@@ -67,6 +77,7 @@ main{
 
 .container{
     background-color: var(--container-bg-color);
+
 }
 
 aside{
@@ -81,6 +92,36 @@ aside{
 
 .tasks{
     background-color: var(--tasks-bg-color);
+}
+
+
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+article.project{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    height: 250px;
+    overflow: hidden;
+}
+
+article.issue, article.task{
+    border: 1px solid black;
+    padding: 5px;
+    height: 100px;
+    overflow: hidden;
+    
+}
+
+article p{
+    text-overflow: ellipsis;
 }
 
 
