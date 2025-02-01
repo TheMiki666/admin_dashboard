@@ -12,21 +12,39 @@
         <h1>Dashboard</h1>
         <ul class="menu">
             <li><img src="images/" alt=""><a href="#">Home</a></li>
-            <li><img src="images/" alt=""><a href="#">User Profile</a></li>
+            <li><img src="images/account-card-outline.svg" alt=""><a href="#">User Profile</a></li>
             <li><img src="images/" alt=""><a href="#">Messages</a></li>
             <li><img src="images/" alt=""><a href="#">Register</a></li>
             <li><img src="images/" alt=""><a href="#">Agenda</a></li>
             <li><img src="images/" alt=""><a href="#">Accidents</a></li>
             <li><img src="images/" alt=""><a href="#">Statistics</a></li>
             <li><img src="images/" alt=""><a href="#">Risk Assessments</a></li>
-            <li><img src="images/" alt=""><a href="#">Database</a></li>
+            <li><img src="images/database.svg" alt=""><a href="#">Database</a></li>
             <li><img src="images/" alt=""><a href="#"></a>Exit</li>
         </ul>
 
     </div>
     <header>
-        <h2>Work safety application</h2>
-        <h3> - Welcome, John Doe - </h3>
+        <form id="dashboard_form" method="post" action="#">
+            <label for="search">Search: </label>
+            <input id="search" type="text" maxlength="50">
+            <button type="button" id="notifications"><img src="images/"></button>
+        </form>
+        <div class="user">
+            <img class="avatar small" src="images/">
+            <p>John Doe</p>
+        </div>
+        <div class ="heading">
+            <img class="avatar small" src="images/">
+            <h2>Work safety application</h2>
+            <h3> - Welcome, John Doe - </h3>
+        </div>
+        <div class ="button_panel">
+            <button id="new" type="button">New</button>
+            <button id="load" type="button">Load</button>
+            <button id="exit" type="button">Exit</button>
+        </div>
+        
 
     </header>
     <main>
@@ -64,11 +82,11 @@
                 <h3>Last issues</h3>
                 <article class="issue">
                     <h4>Important meeting tomorrow!</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsamquos non officiis repellat debitis?</p>
                 </article>
                 <article class="issue">
                     <h4>New accident in Springfield nuclear plant</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Homer Simpson quos non officiis repellat debitis?</p>
+                    <p>Homer Simpson dolor sit amet consectetur adipisicing elit. Aut ipsamquos non officiis repellat debitis?</p>
                 </article>
                 <article class="issue">
                     <h4>Fiat will manufacture the new Volvo model</h4>
