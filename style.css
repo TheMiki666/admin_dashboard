@@ -12,6 +12,7 @@
     --aside-bg-color: #f36060;
     --issues-bg-color: #f072db;
     --tasks-bg-color: yellow;
+    --active-link-color: purple;
 }
 
 body{
@@ -40,7 +41,8 @@ h1, h2, h3{
 h1{
     font-size: 2.5rem;
     display: block;
-    padding: 10px 20px;
+    margin: 20px 40px;
+    align-self: center;
 }
 
 .nav ul{
@@ -55,13 +57,19 @@ h1{
     font-size: 1.5rem;
     color: var(--nav-text-color);
     text-decoration: none;
+    box-sizing: border-box;
+    height: 50px;
+    padding: auto 20px;
+    display: flex;
+    align-items: center;
 }
 
 .nav ul li img{
-    width: 20px;
-    height: 20px;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
     display: inline;
-    fill: var(--nav-text-color) !important;
+    fill: var(--nav-text-color);
 }
 
 .nav ul li a:link, .nav ul li a:visited{
@@ -69,9 +77,19 @@ h1{
     text-decoration: none;
 }
 
-.nav ul li:hover{
+.nav ul li:hover a{
     font-size: 1.7rem;
 }
+
+.nav ul li:hover img{
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.nav ul li a:active{ 
+    color: var(--active-link-color);
+}
+
 
 header{
     grid-area: 1 / 2 / 2 / 3;
