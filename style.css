@@ -8,11 +8,12 @@
     --nav-bg-color: rgb(35, 148, 123);
     --nav-text-color: white;
     --header-bg-color: #afa1a1;
-    --container-bg-color: #a1eb8e;
+    --container-bg-color: #dfecf0;
     --aside-bg-color: #f36060;
     --issues-bg-color: #f072db;
     --tasks-bg-color: yellow;
-    --active-link-color: purple;
+    --active-link-color: rgb(231, 224, 181);
+    --article-bg-color: white;
 }
 
 body{
@@ -43,6 +44,10 @@ h1{
     display: block;
     margin: 20px 40px;
     align-self: center;
+}
+
+.container h3{
+    padding: 20px 20px 0px;
 }
 
 .nav ul{
@@ -142,17 +147,8 @@ aside{
     background-color: var(--aside-bg-color);
     display: grid;
     grid-template-rows: 1fr 1fr;
+    
 }
-
-.issues{
-    background-color: var(--issues-bg-color);
-}
-
-.tasks{
-    background-color: var(--tasks-bg-color);
-}
-
-
 
 .projects{
     display: grid;
@@ -163,19 +159,50 @@ aside{
 
 
 article.project{
-    border: 1px solid black;
+    border-left: 5px solid orange;
     border-radius: 5px;
     padding: 20px;
     height: 250px;
     overflow: hidden;
+    background-color: var(--article-bg-color);
+    box-shadow: grey 5px 5px 5px 2px;
+
 }
 
-article.issue, article.task{
-    border: 1px solid black;
-    padding: 5px;
-    height: 100px;
-    overflow: hidden;
+
+
+.issues, .tasks{
+    background-color: var( --container-bg-color);
+    padding: 0 10px;
     
+}
+
+.issues h3, .tasks h3{
+    padding: 10px;
+}
+
+
+article.issue, article.task{
+    padding: 0px 10px 10px;
+    height: 120px;
+    overflow: hidden;
+    background-color: var(--article-bg-color);
+
+}
+
+article.issue + article.issue::before, article.task+ article.task::before{
+    content: "............"
+}
+
+article.issue p, article.task p{
+    text-overflow: ellipsis;
+}
+
+.aside-container{
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: grey 2px 2px 5px 2px;
+    background-color: var( --article-bg-color);
 }
 
 
