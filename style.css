@@ -194,16 +194,11 @@ aside{
     gap: 20px;
     padding: 20px;
 }
-.project{
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-}
 
 .project .view_edit{
     display: flex;
     flex-direction: row-reverse;
+    margin-top: 20px;
 }
 
 .project .view_edit a{
@@ -225,10 +220,17 @@ article.project{
     overflow: hidden;
     background-color: var(--article-bg-color);
     box-shadow: var(--shadow) 5px 5px 5px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
 
 }
 
+article.project p{
+    overflow: hidden;
 
+}
 
 .issues, .tasks{
     background-color: var( --container-bg-color);
@@ -305,7 +307,7 @@ form{
     border-radius: 20px;
     padding: 0 1em;
 }
-s
+
 #search:focus, #search:active, #search:focus:active{
     border: none !important;
     outline: none !important;
