@@ -12,8 +12,9 @@
     --aside-bg-color: #f36060;
     --issues-bg-color: #f072db;
     --tasks-bg-color: yellow;
-    --active-link-color: rgb(231, 224, 181);
+    --active-link-color: rgb(199, 13, 236);
     --article-bg-color: white;
+    --shadow: gray;
 }
 
 body{
@@ -98,10 +99,10 @@ h1{
 
 header{
     grid-area: 1 / 2 / 2 / 3;
-    background-color: var(--header-bg-color);
+    background-color: var(--article-bg-color);
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 2fr;
     height: 150px;
 }
 
@@ -118,7 +119,23 @@ form{
 .heading{
     grid-row: 2;
     grid-column: 1;
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: 1f 1fr;
+}
 
+.heading h2{
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    justify-self: self-start;
+}
+
+.heading h3{
+    grid-column: 2;
+    grid-row: 2;
+    align-self: flex-start;
+    justify-self: self-start;
 }
 
 .button_panel{
@@ -126,9 +143,28 @@ form{
     grid-column: 2;
 }
 
-header h2, header h3{
-    height: 3rem;
-    padding: auto;
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+}
+
+img[alt="avatar"].small{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+
+img[alt="avatar"].big{
+    grid-column: 1;
+    grid-row: span 2;
+    align-self: center;
+    justify-self: center;
+    width: 4rem;
+    height: 4rem;
 }
 
 main{
@@ -165,7 +201,7 @@ article.project{
     height: 250px;
     overflow: hidden;
     background-color: var(--article-bg-color);
-    box-shadow: grey 5px 5px 5px 2px;
+    box-shadow: var(--shadow) 5px 5px 5px 2px;
 
 }
 
@@ -173,7 +209,7 @@ article.project{
 
 .issues, .tasks{
     background-color: var( --container-bg-color);
-    padding: 0 10px;
+    padding: 0 20px 0 0;
     
 }
 
@@ -201,8 +237,77 @@ article.issue p, article.task p{
 .aside-container{
     padding: 10px 10px;
     border-radius: 5px;
-    box-shadow: grey 2px 2px 5px 2px;
+    box-shadow: var(--shadow) 2px 2px 5px 2px;
     background-color: var( --article-bg-color);
+}
+
+.button_panel button{
+    padding: 7px 30px;
+    margin: 0 10px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--shadow) 3px 3px 3px 3px;
+    font-family: 1.2em;
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+}
+
+.button_panel button:active{
+    box-shadow: var(--shadow) 1px 1px 0px 0px;
+    color: var(--active-link-color);
+    
+}
+
+.button_panel{
+    align-self: center;
+    justify-self: center;
+    
+}
+
+form{
+    padding: 20px 10px 10px;
+    
+}
+
+#search{
+    background-color: rgb(218, 241, 234);
+    border: none;
+    width: 500px;
+    border-radius: 20px;
+    padding: 0 1em;
+}
+s
+#search:focus, #search:active, #search:focus:active{
+    border: none !important;
+    outline: none !important;
+    
+}
+
+label[for="search"]{
+    color: rgb(0,0,0,0);
+    background-image: url(images/magnify.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.5rem;
+    width: 2em;
+    height: 40px;
+    padding: 5px;
+
+}
+
+#notifications{
+    width: 2em;
+    height: 40px;
+    padding: 5px;
+    margin: 0 2em;
+    border: none;
+    background-color: var(--article-bg-color);
 }
 
 
